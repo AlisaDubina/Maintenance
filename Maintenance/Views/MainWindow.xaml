@@ -1,0 +1,51 @@
+﻿<Window x:Class="Maintenance.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maintenance"
+        mc:Ignorable="d"
+        Title="Техобслуживание"
+        Height="550" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        ShowInTaskbar="False" 
+        FontFamily="Verdana">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Меню -->
+            <RowDefinition Height="24"/>
+
+            <!-- Панель инструментов -->
+            <RowDefinition Height="42"/>
+
+            <!-- Рабочая область -->
+            <RowDefinition Height="*"/>
+
+            <!-- Строка состояния -->
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Меню приложения - в верхней части окна -->
+        <Menu Grid.Row="0" Grid.Column="0" Height="30" HorizontalAlignment="Stretch" VerticalContentAlignment="Center"
+              FontFamily="Verdana" FontSize="14">
+            <!--Файл-->
+            <MenuItem Header="Файл">
+                <!--Выход-->
+                <MenuItem Header="Выход" Click="Exit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/door_out.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!-- Статус-бар -->
+        <StatusBar Grid.Row="3" Background="DarkSlateBlue" Foreground="Azure" Padding="0">
+            <TextBlock Margin="10,0,0,0" Name="TbStatusBar" Width="450" Height="26" FontSize="16"
+                       MaxWidth="450"></TextBlock>
+        </StatusBar>
+    </Grid>
+</Window>

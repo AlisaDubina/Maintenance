@@ -1,0 +1,7 @@
+# папки и файлы, не добавляемые в СКВ
+.vs
+.git
+Maintenance/bin
+Maintenance/obj
+MaintenanceLibrary/bin
+MaintenanceLibrary/obj
