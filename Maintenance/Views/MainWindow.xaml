@@ -10,7 +10,7 @@
         Width="800" 
         ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen" 
-        ShowInTaskbar="False" 
+        ShowInTaskbar="True" 
         FontFamily="Verdana">
     <Grid>
         <Grid.RowDefinitions>
@@ -40,6 +40,8 @@
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
+            <!--Ветвь branch1-->
+            <MenuItem Header="Ветвь branch1" Click="Branch1_Command"/>
         </Menu>
 
         <!-- Статус-бар -->

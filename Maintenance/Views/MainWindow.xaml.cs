@@ -20,11 +20,17 @@ namespace Maintenance.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Это ветвь branch1
         public MainWindow()
         {
             InitializeComponent();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e) => Close();
+
+        private void Branch1_Command(object sender, RoutedEventArgs e) {
+            Branch1Window branch1Window = new Branch1Window();
+            branch1Window.ShowDialog();
+        } // Branch1_Command
     }
 }
